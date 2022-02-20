@@ -1,0 +1,152 @@
+body {
+    font-family: Poppins, serif;
+    background: img("/images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gallery {
+    display: flex;
+    justify-content: center;
+}
+
+a:visited {
+    color: blue;
+}
+
+.card > header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    flex-basis: 450px;
+}
+
+.card > ul > header > h4 {
+    text-align: center;
+}
+
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    animation-duration: 5s;
+    animation-name: logo_animate;
+}
+@keyframes logo_animate {
+    from {
+        top: 0px;
+        opacity: 0;
+        width: 25px;
+    }
+
+    to {
+        top: 200px;
+        opacity: 1;
+        width: 475px;
+    }
+}
+
+
+@media screen and (min-width: 900px){
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pricing {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        width: 250px;
+    }
+
+    body > header {
+        display: flex;
+        position: sticky;
+        flex-direction: row;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    .logo {
+        animation: none;
+    }
+}
+
+@media print {
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background: none;
+    }
+
+    .nav_links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .pricing {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .card {
+        border: 2px solid #45ADDD;
+        display: flex;
+        flex-basis: 325px;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    li:nth-child(2)::before {
+        content: "\01F44D";
+    }
+
+}
