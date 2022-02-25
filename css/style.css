@@ -1,6 +1,6 @@
 body {
     font-family: Poppins, serif;
-    background: img("/images/concrete_seamless.png");
+    background: url("../images/concrete_seamless.png");
     background-color: #f1f1f1;
 }
 
@@ -16,10 +16,10 @@ header {
     align-items: center;
 }
 
-#gallery {
+/* #gallery {
     display: flex;
     justify-content: center;
-}
+} */
 
 a:visited {
     color: blue;
@@ -48,7 +48,7 @@ a:visited {
     flex-basis: 450px;
 }
 
-.card > ul > header > h4 {
+h4 {
     text-align: center;
 }
 
@@ -64,19 +64,19 @@ a:visited {
     justify-content: center;
 }
 
-.logo {
+#logo {
+    align-self: center;
     animation-duration: 5s;
     animation-name: logo_animate;
 }
+
 @keyframes logo_animate {
     from {
-        top: 0px;
         opacity: 0;
         width: 25px;
     }
 
     to {
-        top: 200px;
         opacity: 1;
         width: 475px;
     }
@@ -89,11 +89,16 @@ a:visited {
         justify-content: space-between;
     }
 
+    nav {
+        justify-content: center;
+        align-self: center;
+    }
+
     .nav_links {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        /* justify-items: center; */
     }
 
     .pricing {
@@ -120,33 +125,42 @@ a:visited {
 }
 
 @media print {
-    body{
+    body {
         font-family: Arial, Helvetica, sans-serif;
-        background: none;
+        background-image: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
     }
 
     .nav_links {
-        display: flex;
+        flex-direction: row;
         justify-content: space-around;
     }
 
     .pricing {
         display: flex;
-        align-items: flex-end;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .card {
+        justify-content: center;
+        flex-wrap: wrap;
         border: 2px solid #45ADDD;
         display: flex;
         flex-basis: 325px;
     }
 
-    .gallery {
+    #gallery, .gallery {
         display: none;
     }
 
-    li:nth-child(2)::before {
+    .card > ul > li:nth-child(2)::after {
         content: "\01F44D";
     }
-
 }
