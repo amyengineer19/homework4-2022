@@ -90,15 +90,12 @@ h4 {
     }
 
     nav {
-        justify-content: center;
         align-self: center;
     }
 
     .nav_links {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        /* justify-items: center; */
     }
 
     .pricing {
