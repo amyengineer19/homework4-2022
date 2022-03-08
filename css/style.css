@@ -105,7 +105,7 @@ h4 {
     }
 
     .card {
-        width: 250px;
+        flex-basis: 250px;
     }
 
     body > header {
@@ -142,14 +142,12 @@ h4 {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        align-items: center;
     }
 
     .card {
         justify-content: center;
         flex-wrap: wrap;
         border: 2px solid #45ADDD;
-        display: flex;
         flex-basis: 325px;
     }
 
